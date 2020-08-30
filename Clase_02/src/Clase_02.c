@@ -13,7 +13,7 @@ Solicitar al usuario que ingrese una serie de números la cual finaliza al intro
 
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <stdio_ext.h>
 
 int main(void) {
 	int numero;
@@ -24,6 +24,7 @@ int main(void) {
 	while(1)
 	{
 		printf("Ingrese un numero: ");
+		__fpurge(stdin);
 		scanf("%d", &numero);
 		if(numero != 999)
 		{
